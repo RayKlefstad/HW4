@@ -1,0 +1,210 @@
+INPUTS
+# Test 1: Mismatch variable assignment
+i:int = "Hello world"
+s:str = 2
+b:bool = False
+# END OF TEST 1 
+# ------------------------------------
+
+# Test 2: Mismatch actual and formal parameter 
+def foo(i:int, b:bool, s:str):
+    pass
+foo(1,2,3)
+# END OF TEST 2
+# ------------------------------------
+
+
+# Test 3: Undeclared variable 
+i:int = a
+# END OF TEST 3
+# ------------------------------------
+
+
+# Test 4: Mismatch return type
+def return_bool()->bool:
+    return 1
+# END OF TEST 4
+# ------------------------------------
+
+
+# Test 5: void fuction should not return 
+def void_func():
+    return "Hello!!!"
+# END OF TEST 5
+# ------------------------------------
+
+
+# Test 6: Multiple declerations 
+def abs_val(a:int)->int:
+    if a < 0:
+        a:int = a * -1
+    return a
+# END OF TEST 6
+# ------------------------------------
+
+
+# Test 7: Mixed list 
+my_list:[int] = [2, 3, "4"]
+# END OF TEST 7
+# ------------------------------------
+
+
+# Test 8: While requires bool 
+c:int = 0
+while 1:
+    c = c + 1
+# END OF TEST 8
+# ------------------------------------
+
+# Test 9: mismatch types for + and == 
+if False + 1:
+    pass
+elif False + True:
+    pass
+elif 1 == "1":
+    pass
+elif 1:
+    pass
+elif "1":
+    pass
+elif 1 + 1:
+    pass
+else:
+    a = 8
+# END OF TEST 9
+# ------------------------------------
+
+# Test 10: logic operans with non-bools
+if 2 and 4:
+    pass
+elif "hello" and "world":
+    pass
+elif True and False:
+    pass
+elif 2 or "two":
+    pass
+elif 1 or 2:
+    pass
+elif "A" or "B":
+    pass
+elif not 1:
+    pass
+elif not "foo":
+    pass
+# END OF TEST 10 
+# ------------------------------------
+
+# Test 11: nested functions and out of scope var
+def print(s:str, i:int):
+    pass
+
+def outer():
+    first_num:int = 1
+    def inner():
+        second_num:int = 2
+        # Print statement 1 - Scope: Inner
+        print("first_num from outer: ", first_num)
+        # Print statement 2 - Scope: Inner
+        print("second_num from inner: ", second_num)
+    inner()
+    # Print statement 3 - Scope: Outer
+    print("second_num from inner: ", second_num)
+
+outer()
+# END OF TEST 11
+# ------------------------------------
+
+# Test 12: assignment to same type is valid
+def foobar():
+    i:bool = True
+    if i:
+        i = False
+# END OF TEST 12
+# ------------------------------------
+
+# Test 13: Strings: concatination with +, assignment, relationals 
+s:str = "a" + "b"
+first:str 
+first = "Peter"
+last : str 
+fn_ln: str 
+fn_ln = first + last
+# END OF TEST 13
+# ------------------------------------
+# Test 14: int type == and + check
+i:int
+i = 20
+if i == 20:
+    i = i + 1
+# END OF TEST 14
+# ------------------------------------
+#Test 15: for loop with bool type 
+def print_bool(b:bool):
+    pass
+for i in [True, False]:
+    print_bool(i)
+# END OF TEST 15
+# ------------------------------------
+
+# Test 16: function calls
+def print(i:int):
+    pass
+
+def f(x:int) -> int:
+    return x * x
+
+def do_stuff():
+    print(f(2))
+# END OF TEST 16
+# ------------------------------------
+# Test 17: int list and 'in' (if i in int list)
+def check_num(i:int, li:[int])-> bool :
+    if i in li:
+        return True
+    return False
+# END OF TEST 17
+# ------------------------------------
+# Test 18: return literal bool expression
+def five_in_list()->bool:
+    return 5 in [1, 2, 5, 7]
+# END OF TEST 18
+# ------------------------------------
+# Test 19: print nested list 
+def print_list(ll:[[int]]):
+    for i in ll:
+        for j in i:
+            pass
+        
+int_list:[[int]] = [[1,2,3],[4,5,6],[7,8,9]]
+print_list(int_list)
+
+# END OF TEST 19
+# ------------------------------------
+# Test 20: relationals
+def int_arithmetic(a:int, b:int)->int:
+    if a != b:
+        if a < b:
+            return b - a
+        elif a >= b:
+            return a - b
+    elif a == b:
+        return 0
+    elif ( a / b ) * b == a:
+        return a / b
+    elif ( a / b ) * b != a and a % b != 0:
+        return a % b
+    else:
+        return a + b * 2 / 3 * a * b / 10 % 1 - 3
+# END OF TEST 20
+# ------------------------------------
+
+# Test 21: declaration and definition of int; adding None is runtime
+a: int
+b: int
+c: int
+a = None
+b = 3
+c = a + b
+# END OF TEST 21
+# ------------------------------------
+
