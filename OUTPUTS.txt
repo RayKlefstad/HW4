@@ -1,0 +1,344 @@
+OUTPUTS
+# Test1
+*** Semantic Error 7:same type required
+*** Semantic Error 7:same type required
+*** Exit Scope ***
+b:Bool
+s:Str
+i:Int
+any:Any
+bool:Bool
+int:Int
+str:Str
+void:Void
+
+# END OF TEST 1
+# ------------------------------------
+# Test2
+*** Exit Scope ***
+__RETURN__:Void
+s:Str
+b:Bool
+i:Int
+
+*** Semantic Error 8:argument type match required
+*** Semantic Error 8:argument type match required
+*** Exit Scope ***
+foo:foo(i:Int, b:Bool, s:Str)->Void
+any:Any
+bool:Bool
+int:Int
+str:Str
+void:Void
+
+# END OF TEST 2
+# ------------------------------------
+# Test3
+*** Semantic Error 6:Reference to undefined identifier: a
+*** Semantic Error 6:same type required
+*** Exit Scope ***
+i:Int
+any:Any
+bool:Bool
+int:Int
+str:Str
+void:Void
+
+# END OF TEST 3
+# ------------------------------------
+# Test4
+*** Semantic Error 7:return expression type match required
+*** Exit Scope ***
+__RETURN__:Bool
+
+*** Exit Scope ***
+return_bool:return_bool()->Bool
+any:Any
+bool:Bool
+int:Int
+str:Str
+void:Void
+
+# END OF TEST 4
+# ------------------------------------
+# Test5
+*** Semantic Error 7:return expression type match required
+*** Exit Scope ***
+__RETURN__:Void
+
+*** Exit Scope ***
+void_func:void_func()->Void
+any:Any
+bool:Bool
+int:Int
+str:Str
+void:Void
+
+# END OF TEST 5
+# ------------------------------------
+# Test6
+*** Semantic Error 9:multiple definitions in scope
+*** Exit Scope ***
+__RETURN__:Int
+a:Int
+
+*** Exit Scope ***
+abs_val:abs_val(a:Int)->Int
+any:Any
+bool:Bool
+int:Int
+str:Str
+void:Void
+
+# END OF TEST 6
+# ------------------------------------
+# Test7
+*** Semantic Error 6:same type required
+*** Exit Scope ***
+my_list:[Int]
+any:Any
+bool:Bool
+int:Int
+str:Str
+void:Void
+
+# END OF TEST 7
+# ------------------------------------
+# Test8
+*** Semantic Error 7:bool type required
+*** Exit Scope ***
+c:Int
+any:Any
+bool:Bool
+int:Int
+str:Str
+void:Void
+
+# END OF TEST 8
+# ------------------------------------
+# Test9
+*** Semantic Error 18:same type required
+*** Semantic Error 18:int or str type required
+*** Semantic Error 18:int or str type required
+*** Semantic Error 18:same type required
+*** Semantic Error 18:bool type required
+*** Semantic Error 18:bool type required
+*** Semantic Error 18:bool type required
+*** Semantic Error 18:Reference to undefined identifier: a
+*** Semantic Error 18:same type required
+*** Exit Scope ***
+any:Any
+bool:Bool
+int:Int
+str:Str
+void:Void
+
+# END OF TEST 9
+# ------------------------------------
+# Test10
+*** Semantic Error 20:bool type required
+*** Semantic Error 20:bool type required
+*** Semantic Error 20:bool type required
+*** Semantic Error 20:bool type required
+*** Semantic Error 20:bool type required
+*** Semantic Error 20:bool type required
+*** Semantic Error 20:bool type required
+*** Semantic Error 20:bool type required
+*** Semantic Error 20:bool type required
+*** Semantic Error 20:bool type required
+*** Semantic Error 20:bool type required
+*** Semantic Error 20:bool type required
+*** Exit Scope ***
+any:Any
+bool:Bool
+int:Int
+str:Str
+void:Void
+
+# END OF TEST 10
+# ------------------------------------
+# Test11
+*** Exit Scope ***
+__RETURN__:Void
+i:Int
+s:Str
+
+*** Exit Scope ***
+second_num:Int
+__RETURN__:Void
+
+*** Semantic Error 20:Reference to undefined identifier: second_num
+*** Semantic Error 20:argument type match required
+*** Exit Scope ***
+inner:inner()->Void
+first_num:Int
+__RETURN__:Void
+
+*** Exit Scope ***
+outer:outer()->Void
+print:print(s:Str, i:Int)->Void
+any:Any
+bool:Bool
+int:Int
+str:Str
+void:Void
+
+# END OF TEST 11
+# ------------------------------------
+# Test12
+*** Exit Scope ***
+i:Bool
+__RETURN__:Void
+
+*** Exit Scope ***
+foobar:foobar()->Void
+any:Any
+bool:Bool
+int:Int
+str:Str
+void:Void
+
+# END OF TEST 12
+# ------------------------------------
+# Test13
+*** Exit Scope ***
+fn_ln:Str
+last:Str
+first:Str
+s:Str
+any:Any
+bool:Bool
+int:Int
+str:Str
+void:Void
+
+# END OF TEST 13
+# ------------------------------------
+# Test14
+*** Exit Scope ***
+i:Int
+any:Any
+bool:Bool
+int:Int
+str:Str
+void:Void
+
+# END OF TEST 14
+# ------------------------------------
+# Test15
+*** Exit Scope ***
+__RETURN__:Void
+b:Bool
+
+*** Exit Scope ***
+i:Bool
+print_bool:print_bool(b:Bool)->Void
+any:Any
+bool:Bool
+int:Int
+str:Str
+void:Void
+
+# END OF TEST 15
+# ------------------------------------
+# Test16
+*** Exit Scope ***
+__RETURN__:Void
+i:Int
+
+*** Exit Scope ***
+__RETURN__:Int
+x:Int
+
+*** Exit Scope ***
+__RETURN__:Void
+
+*** Exit Scope ***
+do_stuff:do_stuff()->Void
+f:f(x:Int)->Int
+print:print(i:Int)->Void
+any:Any
+bool:Bool
+int:Int
+str:Str
+void:Void
+
+# END OF TEST 16
+# ------------------------------------
+# Test17
+*** Exit Scope ***
+__RETURN__:Bool
+li:[Int]
+i:Int
+
+*** Exit Scope ***
+check_num:check_num(i:Int, li:[Int])->Bool
+any:Any
+bool:Bool
+int:Int
+str:Str
+void:Void
+
+# END OF TEST 17
+# ------------------------------------
+# Test18
+*** Exit Scope ***
+__RETURN__:Bool
+
+*** Exit Scope ***
+five_in_list:five_in_list()->Bool
+any:Any
+bool:Bool
+int:Int
+str:Str
+void:Void
+
+# END OF TEST 18
+# ------------------------------------
+# Test19
+*** Exit Scope ***
+j:Int
+i:[Int]
+__RETURN__:Void
+ll:[[Int]]
+
+*** Exit Scope ***
+int_list:[[Int]]
+print_list:print_list(ll:[[Int]])->Void
+any:Any
+bool:Bool
+int:Int
+str:Str
+void:Void
+
+# END OF TEST 19
+# ------------------------------------
+# Test20
+*** Exit Scope ***
+__RETURN__:Int
+b:Int
+a:Int
+
+*** Exit Scope ***
+int_arithmetic:int_arithmetic(a:Int, b:Int)->Int
+any:Any
+bool:Bool
+int:Int
+str:Str
+void:Void
+
+# END OF TEST 20
+# ------------------------------------
+# Test21
+*** Exit Scope ***
+c:Int
+b:Int
+a:Int
+any:Any
+bool:Bool
+int:Int
+str:Str
+void:Void
+
+# END OF TEST 21
+# ------------------------------------
